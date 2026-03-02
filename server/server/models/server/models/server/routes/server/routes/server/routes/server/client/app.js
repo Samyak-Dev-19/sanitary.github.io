@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:8080/api"; // change after deploy
+const API_BASE = "https://YOUR-BACKEND-DOMAIN/api"; // change after deploy
 
 let products = [];
 let cart = [];
@@ -115,5 +115,6 @@ window.addToCart = addToCart;
 window.incQty = incQty;
 window.decQty = decQty;
 window.removeItem = removeItem;
+
 
 loadProducts();
