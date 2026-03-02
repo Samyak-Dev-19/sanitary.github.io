@@ -394,7 +394,7 @@ img{max-width:100%;display:block}
 }
 .story-copy h2{font-size:34px;letter-spacing:-.3px}
 .story-copy p{margin-top:10px;color:var(--muted);max-width:560px}
-..feature-list{margin-top:18px;display:flex;flex-direction:column;gap:14px}
+.feature-list{margin-top:18px;display:flex;flex-direction:column;gap:14px}
 .feature{display:flex;gap:12px;align-items:flex-start}
 .feature i{color:var(--primary);font-size:18px;margin-top:3px}
 .feature-title{font-weight:700}
