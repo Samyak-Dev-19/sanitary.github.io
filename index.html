@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Your CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles_fixed.css" />
 
   <!-- Favicon (optional) -->
   <!-- <link rel="icon" href="favicon.png" /> -->
@@ -752,118 +752,7 @@
       <div class="policy-note">© <span id="year"></span> Sentry Pads. All rights reserved.</div>
     </div>
   </footer>
-
-  <!-- Minimal JS (works with your existing app.js later) -->
-  <script>
-    // Year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Mobile menu
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
-
-    // Simple filter (front-end demo)
-    function filterProducts(tag) {
-      const buttons = document.querySelectorAll(".filter-btn");
-      buttons.forEach(b => b.classList.remove("active"));
-      const clicked = Array.from(buttons).find(b => b.textContent.toLowerCase().includes(tag) || (tag === "all" && b.textContent === "All"));
-      if (clicked) clicked.classList.add("active");
-
-      const cards = document.querySelectorAll(".product-card");
-      cards.forEach(card => {
-        if (tag === "all") return card.style.display = "";
-        const tags = (card.getAttribute("data-tag") || "").split(" ");
-        card.style.display = tags.includes(tag) ? "" : "none";
-      });
-    }
-
-    // Cart (demo frontend). Replace with DB/Stripe backend logic in app.js.
-    let cart = [];
-    function addToCart(name, price) {
-      const item = cart.find(i => i.name === name);
-      if (item) item.qty += 1;
-      else cart.push({ name, price, qty: 1 });
-      updateCartUI();
-      showToast("Added to cart");
-    }
-
-    function updateCartUI() {
-      const itemsEl = document.getElementById("cart-items");
-      const totalEl = document.getElementById("cart-total");
-      const countEl = document.getElementById("cart-count");
-
-      let total = 0;
-      itemsEl.innerHTML = "";
-
-      cart.forEach((item, idx) => {
-        total += item.price * item.qty;
-        const row = document.createElement("div");
-        row.className = "cart-row";
-        row.innerHTML = `
-          <div class="cart-row-left">
-            <div class="cart-name">${item.name}</div>
-            <div class="cart-meta">$${item.price} × ${item.qty}</div>
-            <div class="qty">
-              <button type="button" onclick="decQty(${idx})" aria-label="Decrease quantity">−</button>
-              <span>${item.qty}</span>
-              <button type="button" onclick="incQty(${idx})" aria-label="Increase quantity">+</button>
-            </div>
-          </div>
-          <div class="cart-row-right">
-            <div class="cart-line">$${(item.price * item.qty).toFixed(2)}</div>
-            <button class="remove" type="button" onclick="removeItem(${idx})" aria-label="Remove item">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </div>
-        `;
-        itemsEl.appendChild(row);
-      });
-
-      totalEl.textContent = total.toFixed(2);
-      countEl.textContent = cart.length;
-      if (cart.length === 0) itemsEl.innerHTML = `<div class="cart-empty">Your cart is empty.</div>`;
-    }
-
-    function incQty(i){ cart[i].qty += 1; updateCartUI(); }
-    function decQty(i){ cart[i].qty = Math.max(1, cart[i].qty - 1); updateCartUI(); }
-    function removeItem(i){ cart.splice(i, 1); updateCartUI(); showToast("Removed"); }
-
-    // Modal
-    function openCart() {
-      const modal = document.getElementById("cartModal");
-      modal.hidden = false;
-      modal.classList.add("show");
-      updateCartUI();
-      document.body.style.overflow = "hidden";
-    }
-    function closeCart() {
-      const modal = document.getElementById("cartModal");
-      modal.classList.remove("show");
-      modal.hidden = true;
-      document.body.style.overflow = "";
-    }
-
-    // Stripe checkout placeholder
-    function startCheckout() {
-      // In your Node + Express + Stripe version, redirect to session.url
-      if (cart.length === 0) return showToast("Cart is empty");
-      showToast("Checkout is connected in backend build");
-    }
-
-    // Toast
-    function showToast(msg) {
-      const toast = document.getElementById("toast");
-      toast.textContent = msg;
-      toast.classList.add("show");
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(() => toast.classList.remove("show"), 2200);
-    }
-  </script>
-
-  <!-- If you already have app.js, include it after this script -->
-  <!-- <script src="app.js"></script> -->
-   <script src="app.js"></script>
-
+  <!-- JS -->
+<script src="script.js"></script>
 </body>
 </html>
