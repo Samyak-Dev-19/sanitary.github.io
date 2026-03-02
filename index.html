@@ -1,267 +1,758 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="color-scheme" content="light dark" />
-  <title>Mobile-First Website</title>
-  <meta name="description" content="A clean, fast, mobile-first template that looks great on phones and desktops." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentry Pads | Premium Women Care</title>
 
-  <meta property="og:title" content="Mobile-First Website" />
-  <meta property="og:description" content="A clean, fast, mobile-first template that looks great on phones and desktops." />
+  <!-- SEO -->
+  <meta name="description" content="Premium eco-friendly women care products — comfort, confidence, and sustainability." />
+  <meta name="keywords" content="women care, sanitary pads, organic pads, eco-friendly hygiene, period care" />
+  <meta property="og:title" content="Sentry Pads | Premium Women Care" />
+  <meta property="og:description" content="Feel Fresh. Feel Confident. Premium eco-friendly period care." />
   <meta property="og:type" content="website" />
 
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Fonts + Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <header class="site-header">
-    <div class="container header-row">
-      <a class="brand" href="#top" aria-label="Homepage">
-        <span class="brand-mark" aria-hidden="true">◆</span>
-        <span class="brand-name">YourBrand</span>
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="styles_fixed.css" />
+
+  <!-- Favicon (optional) -->
+  <!-- <link rel="icon" href="favicon.png" /> -->
+</head>
+
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <div class="announcement-left">
+        <i class="fa-solid fa-truck-fast"></i>
+        <span>Free shipping over $30</span>
+        <span class="dot">•</span>
+        <i class="fa-solid fa-leaf"></i>
+        <span>100% skin-friendly</span>
+        <span class="dot">•</span>
+        <i class="fa-solid fa-lock"></i>
+        <span>Secure checkout</span>
+      </div>
+
+      <div class="announcement-right">
+        <a href="#help" class="announcement-link">Help</a>
+        <span class="dot">•</span>
+        <a href="#track" class="announcement-link">Track Order</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Sentry Pads Home">
+        <span class="brand-mark"><i class="fa-solid fa-seedling"></i></span>
+        <span class="brand-name">Sentry Pads</span>
       </a>
 
-      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="menu-btn__icon" aria-hidden="true">☰</span>
-        <span class="sr-only">Menu</span>
-      </button>
-
-      <nav id="site-nav" class="nav" aria-label="Primary">
-        <a href="#features">Features</a>
-        <a href="#work">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a class="nav-cta" href="#contact">Contact</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#why">Why Sentry</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search" type="button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <button class="icon-btn" aria-label="Account" type="button">
+          <i class="fa-regular fa-user"></i>
+        </button>
+
+        <button class="icon-btn cart-btn" aria-label="Open cart" type="button" onclick="openCart()">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-pill">
+            <span id="cart-count">0</span>
+          </span>
+        </button>
+
+        <button class="mobile-toggle" aria-label="Open menu" type="button" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main id="main">
-    <section id="top" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="kicker">Mobile-first • Fast • Accessible</p>
-          <h1>Make your website look great on phones and desktops.</h1>
-          <p class="lead">
-            This template is built with responsive layouts, fluid typography, and touch-friendly UI.
-            Drop in your content and ship.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#pricing">See pricing</a>
-            <a class="btn btn-ghost" href="#features">Explore features</a>
-          </div>
-          <p class="subtle">No frameworks required. Works in modern browsers on Android, iOS, Windows, macOS, and Linux.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="hero-badges">
+          <span class="badge"><i class="fa-solid fa-shield-heart"></i> Dermatologically tested</span>
+          <span class="badge"><i class="fa-solid fa-recycle"></i> Sustainable packaging</span>
         </div>
 
-        <div class="hero-card" role="region" aria-label="Preview">
-          <div class="preview-top">
-            <span class="dot" aria-hidden="true"></span>
-            <span class="dot" aria-hidden="true"></span>
-            <span class="dot" aria-hidden="true"></span>
-            <span class="preview-title">Preview</span>
+        <h1>
+          Feel Fresh. Feel <span class="accent">Confident.</span>
+        </h1>
+
+        <p>
+          Premium, eco-friendly period care designed for comfort, breathability, and protection —
+          without harsh chemicals.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#shop" class="btn btn-primary">Shop Best Sellers</a>
+          <a href="#why" class="btn btn-ghost">Why Sentry</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">4.9★</div>
+            <div class="stat-label">Avg. rating</div>
           </div>
-          <div class="preview-body">
-            <div class="preview-line w-80"></div>
-            <div class="preview-line w-60"></div>
-            <div class="preview-line w-90"></div>
-            <div class="preview-grid">
-              <div class="preview-tile"></div>
-              <div class="preview-tile"></div>
-              <div class="preview-tile"></div>
-              <div class="preview-tile"></div>
-            </div>
-            <div class="preview-pill"></div>
+          <div class="stat">
+            <div class="stat-num">50k+</div>
+            <div class="stat-label">Customers</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">24/7</div>
+            <div class="stat-label">Support</div>
           </div>
         </div>
       </div>
-    </section>
 
-    <section id="features" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Features that matter on mobile</h2>
-          <p class="muted">Built-in patterns to prevent overflow, tiny tap targets, and unreadable text.</p>
-        </div>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Responsive by default</h3>
-            <p>Layouts stack on small screens and expand smoothly on larger viewports.</p>
-          </article>
-          <article class="card">
-            <h3>Fluid typography</h3>
-            <p>Readable sizing using <code>clamp()</code> so text scales naturally across devices.</p>
-          </article>
-          <article class="card">
-            <h3>Touch friendly</h3>
-            <p>Buttons and links use a minimum 44px target for comfortable tapping.</p>
-          </article>
-          <article class="card">
-            <h3>Accessible</h3>
-            <p>Skip link, ARIA labels, focus styles, and reduced-motion support.</p>
-          </article>
-          <article class="card">
-            <h3>Fast</h3>
-            <p>Just HTML/CSS/JS. No build step required. You can deploy to GitHub Pages.</p>
-          </article>
-          <article class="card">
-            <h3>Easy to customize</h3>
-            <p>Change colors, spacing, and type in one place using CSS variables.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="section section-alt">
-      <div class="container two-col">
-        <div>
-          <h2>How it works</h2>
-          <p class="muted">A simple structure that keeps you out of trouble:</p>
-          <ol class="steps">
-            <li><strong>Viewport + container</strong> rules prevent horizontal scrolling.</li>
-            <li><strong>Grid and flex</strong> for layout, with a couple of breakpoints.</li>
-            <li><strong>Reusable components</strong> like cards, buttons, and sections.</li>
-          </ol>
-          <div class="inline-actions">
-            <a class="btn btn-primary" href="#contact">Get help</a>
-            <a class="btn btn-ghost" href="#faq">Read FAQ</a>
+      <div class="hero-media">
+        <!-- Free image (Unsplash) -->
+        <div class="hero-card">
+          <img
+            src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1200&q=80"
+            alt="Minimal clean lifestyle photo representing fresh care"
+            loading="lazy"
+          />
+          <div class="hero-card-overlay">
+            <div class="hero-card-title">New: Comfort+ Series</div>
+            <div class="hero-card-sub">Soft • Breathable • Secure</div>
           </div>
         </div>
 
-        <aside class="callout" aria-label="Tip">
-          <h3>Tip</h3>
-          <p>
-            Avoid fixed widths like <code>1200px</code> and fixed heights like <code>600px</code>.
-            Prefer <code>max-width</code>, <code>min-height</code>, and content-driven layout.
-          </p>
-          <p class="muted">This template shows safe defaults you can copy into your own site.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section id="pricing" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Pricing</h2>
-          <p class="muted">Example pricing cards with a “recommended” plan.</p>
-        </div>
-
-        <div class="pricing">
-          <article class="price-card">
-            <h3>Starter</h3>
-            <p class="price"><span class="currency">$</span>0</p>
-            <ul>
-              <li>Single page</li>
-              <li>Basic components</li>
-              <li>Email support</li>
-            </ul>
-            <a class="btn btn-ghost" href="#contact">Choose Starter</a>
-          </article>
-
-          <article class="price-card recommended" aria-label="Pro (recommended)">
-            <div class="badge">Recommended</div>
-            <h3>Pro</h3>
-            <p class="price"><span class="currency">$</span>19</p>
-            <ul>
-              <li>Multi-page ready</li>
-              <li>Component library</li>
-              <li>Priority support</li>
-            </ul>
-            <a class="btn btn-primary" href="#contact">Choose Pro</a>
-          </article>
-
-          <article class="price-card">
-            <h3>Team</h3>
-            <p class="price"><span class="currency">$</span>49</p>
-            <ul>
-              <li>Team features</li>
-              <li>Design review</li>
-              <li>Dedicated support</li>
-            </ul>
-            <a class="btn btn-ghost" href="#contact">Choose Team</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section section-alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>FAQ</h2>
-          <p class="muted">Quick answers for common mobile layout issues.</p>
-        </div>
-
-        <div class="faq">
-          <details>
-            <summary>Why does my page scroll sideways on mobile?</summary>
-            <div class="details-body">
-              Usually a fixed-width element (like a wide image, table, or container) is overflowing.
-              Make sure images use <code>max-width: 100%</code> and avoid hard-coded widths.
-            </div>
-          </details>
-
-          <details>
-            <summary>How do I make my navbar work on phones?</summary>
-            <div class="details-body">
-              Use a menu button that toggles the nav open/closed. This template includes a small JS toggle and responsive CSS.
-            </div>
-          </details>
-
-          <details>
-            <summary>Can I deploy this to GitHub Pages?</summary>
-            <div class="details-body">
-              Yes. Put these files in a GitHub repo and enable GitHub Pages in your repo settings.
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container two-col">
-        <div>
-          <h2>Contact</h2>
-          <p class="muted">This is a static form layout. Hook it up to your backend or a form service.</p>
-          <div class="contact-info">
-            <p><strong>Email:</strong> hello@example.com</p>
-            <p><strong>Location:</strong> Anywhere</p>
+        <div class="floating-mini">
+          <div class="mini-icon"><i class="fa-solid fa-droplet"></i></div>
+          <div class="mini-text">
+            <div class="mini-title">LeakGuard Core</div>
+            <div class="mini-sub">All-day confidence</div>
           </div>
         </div>
 
-        <form class="form" action="#" method="post">
-          <label>
-            Name
-            <input name="name" autocomplete="name" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" autocomplete="email" required />
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button class="btn btn-primary" type="submit">Send message</button>
-          <p class="form-note">By sending, you agree to be contacted back.</p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <p>© <span id="year"></span> YourBrand. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#top">Back to top</a>
-        <a href="#features">Features</a>
-        <a href="#contact">Contact</a>
+        <div class="floating-mini right">
+          <div class="mini-icon"><i class="fa-solid fa-wind"></i></div>
+          <div class="mini-text">
+            <div class="mini-title">AirSoft Top</div>
+            <div class="mini-sub">Breathable comfort</div>
+          </div>
+        </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="assets/js/main.js" defer></script>
+  <!-- Trust Strip -->
+  <section class="trust-strip" id="why">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <i class="fa-solid fa-leaf"></i>
+        <div>
+          <div class="trust-title">Plant-based materials</div>
+          <div class="trust-sub">Gentle on skin</div>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <i class="fa-solid fa-flask"></i>
+        <div>
+          <div class="trust-title">Lab-tested safety</div>
+          <div class="trust-sub">No harsh chemicals</div>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <i class="fa-solid fa-box"></i>
+        <div>
+          <div class="trust-title">Discreet delivery</div>
+          <div class="trust-sub">Always private</div>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <i class="fa-solid fa-headset"></i>
+        <div>
+          <div class="trust-title">Care team support</div>
+          <div class="trust-sub">Here for you</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Shop by Need</h2>
+        <p>Find your best match — daytime, night care, and sensitive-skin options.</p>
+      </div>
+
+      <div class="category-grid">
+        <a class="category-card" href="#shop" aria-label="Shop Daily Comfort">
+          <div class="category-bg">
+            <img
+              src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80"
+              alt="Daily comfort lifestyle"
+              loading="lazy"
+            />
+          </div>
+          <div class="category-overlay">
+            <div class="category-title">Daily Comfort</div>
+            <div class="category-sub">Light to regular flow</div>
+          </div>
+        </a>
+
+        <a class="category-card" href="#shop" aria-label="Shop Night Protection">
+          <div class="category-bg">
+            <img
+              src="https://images-static.nykaa.com/media/catalog/product/0/4/04aeb18STAYF00000005a_a03.jpg?tr=w-500"
+              alt="Night care calm bedroom"
+              loading="lazy"
+            />
+          </div>
+          <div class="category-overlay">
+            <div class="category-title">Night Protection</div>
+            <div class="category-sub">Extra coverage</div>
+          </div>
+        </a>
+
+        <a class="category-card" href="#shop" aria-label="Shop Sensitive Skin">
+          <div class="category-bg">
+            <img
+              src="https://pureoilsindia.b-cdn.net/storage/blog/care-for-sensitive-skin.jpg"
+              alt="Soft cotton and skincare concept"
+              loading="lazy"
+            />
+          </div>
+          <div class="category-overlay">
+            <div class="category-title">Sensitive Skin</div>
+            <div class="category-sub">Ultra-gentle</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Sellers / Products -->
+  <section class="section section-soft" id="shop">
+    <div class="container">
+      <div class="section-head">
+        <h2>Best Sellers</h2>
+        <p>Premium essentials loved for comfort and confidence.</p>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Product filters">
+        <button class="filter-btn active" type="button" onclick="filterProducts('all')">All</button>
+        <button class="filter-btn" type="button" onclick="filterProducts('daily')">Daily</button>
+        <button class="filter-btn" type="button" onclick="filterProducts('night')">Night</button>
+        <button class="filter-btn" type="button" onclick="filterProducts('organic')">Organic</button>
+      </div>
+
+      <!-- Product grid can be DB-driven later. For now, static cards. -->
+      <div class="product-grid" id="productGrid">
+
+        <!-- PRODUCT 1 -->
+        <article class="product-card" data-tag="daily organic">
+          <div class="product-media">
+            <img
+              src="https://image.made-in-china.com/202f0j00USiqpnVaHuck/Ultra-Comfort-Joy-Girl-Sanitary-Pads-10-Pieces-Per-Bag-High-Absorbency-Dry-Net-Surface-Free-Sample-Offer-Lady-Organ-Care.webp"
+              alt="Premium hygiene product concept"
+              loading="lazy"
+            />
+            <div class="product-badges">
+              <span class="pill">Organic</span>
+              <span class="pill outline">Best seller</span>
+            </div>
+            <button class="quick-add" type="button" aria-label="Add Ultra Comfort Pads"
+              onclick="addToCart('Ultra Comfort Pads', 12)">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+
+          <div class="product-body">
+            <div class="product-top">
+              <div>
+                <div class="product-kicker">Daily Comfort</div>
+                <h3 class="product-title">Ultra Comfort Pads</h3>
+              </div>
+              <div class="product-rating" aria-label="4.9 rating">
+                <i class="fa-solid fa-star"></i><span>4.9</span>
+              </div>
+            </div>
+
+            <p class="product-desc">Breathable top layer with LeakGuard core for all-day confidence.</p>
+
+            <div class="product-bottom">
+              <div class="price">$12</div>
+              <button class="btn btn-small" type="button" onclick="addToCart('Ultra Comfort Pads', 12)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCT 2 -->
+        <article class="product-card" data-tag="night">
+          <div class="product-media">
+            <img
+              src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80"
+              alt="Night care calm concept"
+              loading="lazy"
+            />
+            <div class="product-badges">
+              <span class="pill">Night</span>
+              <span class="pill outline">Extra-long</span>
+            </div>
+            <button class="quick-add" type="button" aria-label="Add Night Protection Pads"
+              onclick="addToCart('Night Protection Pads', 15)">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+
+          <div class="product-body">
+            <div class="product-top">
+              <div>
+                <div class="product-kicker">Night Protection</div>
+                <h3 class="product-title">Night Protection Pads</h3>
+              </div>
+              <div class="product-rating">
+                <i class="fa-solid fa-star"></i><span>4.8</span>
+              </div>
+            </div>
+
+            <p class="product-desc">Extra coverage and secure wings designed for restful sleep.</p>
+
+            <div class="product-bottom">
+              <div class="price">$15</div>
+              <button class="btn btn-small" type="button" onclick="addToCart('Night Protection Pads', 15)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCT 3 -->
+        <article class="product-card" data-tag="organic daily">
+          <div class="product-media">
+            <img
+              src="https://images.unsplash.com/photo-1556228578-567ba127e37f?auto=format&fit=crop&w=1200&q=80"
+              alt="Organic cotton concept"
+              loading="lazy"
+            />
+            <div class="product-badges">
+              <span class="pill">Organic</span>
+              <span class="pill outline">Sensitive</span>
+            </div>
+            <button class="quick-add" type="button" aria-label="Add Organic Cotton Pads"
+              onclick="addToCart('Organic Cotton Pads', 18)">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+
+          <div class="product-body">
+            <div class="product-top">
+              <div>
+                <div class="product-kicker">Sensitive Skin</div>
+                <h3 class="product-title">Organic Cotton Pads</h3>
+              </div>
+              <div class="product-rating">
+                <i class="fa-solid fa-star"></i><span>4.9</span>
+              </div>
+            </div>
+
+            <p class="product-desc">Soft organic cotton feel with clean materials for gentle comfort.</p>
+
+            <div class="product-bottom">
+              <div class="price">$18</div>
+              <button class="btn btn-small" type="button" onclick="addToCart('Organic Cotton Pads', 18)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-foot">
+        <a class="link-arrow" href="#contact">
+          Need help choosing? Talk to our care team <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Story -->
+  <section class="section">
+    <div class="container story-grid">
+      <div class="story-media">
+        <img
+          src="https://uniclan.in/wp-content/uploads/2023/10/How-to-Choose-the-Right-Type-of-Sanitary-Pads-6.png"
+          alt="Brand story lifestyle"
+          loading="lazy"
+        />
+      </div>
+      <div class="story-copy">
+        <h2>Built for Real Life</h2>
+        <p>
+          Sentry is made for modern routines — workdays, travel, workouts, and everything in-between.
+          Our materials are chosen for comfort, breathability, and safety.
+        </p>
+
+        <div class="feature-list">
+          <div class="feature">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <div class="feature-title">Soft-touch top layer</div>
+              <div class="feature-sub">Comfort that lasts all day</div>
+            </div>
+          </div>
+
+          <div class="feature">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <div class="feature-title">LeakGuard absorbent core</div>
+              <div class="feature-sub">Confidence on the go</div>
+            </div>
+          </div>
+
+          <div class="feature">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <div class="feature-title">Discreet & sustainable packaging</div>
+              <div class="feature-sub">Better for you and the planet</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-cta">
+          <a href="#shop" class="btn btn-primary">Shop Now</a>
+          <a href="#faq" class="btn btn-ghost">Read FAQs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section-soft" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <h2>Loved by Customers</h2>
+        <p>Real feedback from women who switched to Sentry.</p>
+      </div>
+
+      <div class="review-grid">
+        <article class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">“Super comfortable and breathable. I can finally forget about discomfort.”</p>
+          <div class="review-user">
+            <div class="avatar">A</div>
+            <div>
+              <div class="user-name">Aisha</div>
+              <div class="user-meta">Verified buyer</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">“Night pads are a game changer. Secure and genuinely soft.”</p>
+          <div class="review-user">
+            <div class="avatar">M</div>
+            <div>
+              <div class="user-name">Meera</div>
+              <div class="user-meta">Verified buyer</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">“Finally something gentle on my skin. Packaging is discreet too.”</p>
+          <div class="review-user">
+            <div class="avatar">S</div>
+            <div>
+              <div class="user-name">Sarah</div>
+              <div class="user-meta">Verified buyer</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to the most common questions.</p>
+      </div>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Are Sentry pads safe for sensitive skin?</summary>
+          <div class="faq-body">Yes — our materials are selected to be gentle, breathable, and skin-friendly.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you offer discreet packaging?</summary>
+          <div class="faq-body">Absolutely. All orders ship in plain, unbranded packaging.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What’s your return policy?</summary>
+          <div class="faq-body">If something isn’t right, contact support within 14 days and we’ll help you out.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How fast is shipping?</summary>
+          <div class="faq-body">Standard shipping typically arrives within 3–6 business days.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container newsletter-inner">
+      <div class="newsletter-copy">
+        <h2>Get 10% off your first order</h2>
+        <p>Join for early access, product drops, and care tips.</p>
+      </div>
+
+      <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Thanks! Check your inbox.');">
+        <label class="sr-only" for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter your email" required />
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-copy">
+        <h2>Need help?</h2>
+        <p>We’re here for you. Reach out for product recommendations or order support.</p>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <div class="contact-title">Email</div>
+              <div class="contact-sub">support@sentrypads.com</div>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <div class="contact-title">Phone</div>
+              <div class="contact-sub">+1 (000) 000-0000</div>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <div class="contact-title">Office</div>
+              <div class="contact-sub">100 Green Street, Care City</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); showToast('Message sent! We’ll reply soon.');">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" placeholder="Optional" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="How can we help?" required></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CART MODAL -->
+  <div class="modal" id="cartModal" role="dialog" aria-modal="true" aria-label="Shopping cart" hidden>
+    <div class="modal-overlay" onclick="closeCart()"></div>
+    <div class="modal-panel">
+      <div class="modal-head">
+        <h3>Your Cart</h3>
+        <button class="icon-btn" aria-label="Close cart" type="button" onclick="closeCart()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div id="cart-items" class="cart-items"></div>
+      </div>
+
+      <div class="modal-foot">
+        <div class="cart-total-row">
+          <span>Total</span>
+          <strong>$<span id="cart-total">0</span></strong>
+        </div>
+
+        <button class="btn btn-primary btn-full" type="button" onclick="startCheckout()">
+          Pay with Stripe
+        </button>
+
+        <p class="fineprint">
+          By checking out, you agree to our <a href="#policies">Terms</a> & <a href="#policies">Privacy Policy</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- PROFESSIONAL FOOTER (real website style) -->
+  <footer class="footer" id="help">
+    <!-- Top -->
+    <div class="container footer-top">
+
+      <!-- Brand + Address -->
+      <div class="footer-col footer-brand">
+        <a class="brand footer-brand-link" href="#top" aria-label="Sentry Pads Home">
+          <span class="brand-mark"><i class="fa-solid fa-seedling"></i></span>
+          <span class="brand-name">Sentry Pads</span>
+        </a>
+
+        <p class="footer-text">
+          Premium women care essentials made with comfort-first design and eco-friendly materials.
+        </p>
+
+        <div class="footer-address">
+          <div><i class="fa-solid fa-location-dot"></i> 100 Green Street, Care City</div>
+          <div><i class="fa-solid fa-envelope"></i> support@sentrypads.com</div>
+          <div><i class="fa-solid fa-phone"></i> +1 (000) 000-0000</div>
+        </div>
+
+        <div class="footer-social" aria-label="Social links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Shop -->
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul class="footer-links">
+          <li><a href="#shop">Best Sellers</a></li>
+          <li><a href="#shop">Daily Comfort</a></li>
+          <li><a href="#shop">Night Protection</a></li>
+          <li><a href="#shop">Sensitive Skin</a></li>
+          <li><a href="#shop">Bundles</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul class="footer-links">
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#track" id="track">Track Order</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#policies">Shipping</a></li>
+          <li><a href="#policies">Returns</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#why">Why Sentry</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Affiliate</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter + Payments -->
+      <div class="footer-col footer-news">
+        <h4>Subscribe</h4>
+        <p class="footer-text small">Get product drops, offers, and care tips. No spam.</p>
+
+        <form class="footer-form" onsubmit="event.preventDefault(); showToast('Subscribed! Welcome to Sentry.');">
+          <label class="sr-only" for="footerEmail">Email</label>
+          <input id="footerEmail" type="email" placeholder="Email address" required />
+          <button type="submit" aria-label="Subscribe">Join</button>
+        </form>
+
+        <div class="footer-badges">
+          <span class="secure-badge"><i class="fa-solid fa-lock"></i> Secure payments</span>
+          <span class="secure-badge"><i class="fa-solid fa-truck"></i> Fast delivery</span>
+        </div>
+
+        <div class="payment-row" aria-label="Payment methods">
+          <span class="pay"><i class="fa-brands fa-cc-visa"></i></span>
+          <span class="pay"><i class="fa-brands fa-cc-mastercard"></i></span>
+          <span class="pay"><i class="fa-brands fa-cc-amex"></i></span>
+          <span class="pay"><i class="fa-brands fa-cc-paypal"></i></span>
+          <span class="pay"><i class="fa-brands fa-apple-pay"></i></span>
+          <span class="pay"><i class="fa-brands fa-google-pay"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Policies row -->
+    <div class="container footer-policy" id="policies">
+      <div class="policy-links">
+        <a href="#">Privacy Policy</a>
+        <span>•</span>
+        <a href="#">Terms of Service</a>
+        <span>•</span>
+        <a href="#">Refund Policy</a>
+        <span>•</span>
+        <a href="#">Cookie Settings</a>
+      </div>
+      <div class="policy-note">© <span id="year"></span> Sentry Pads. All rights reserved.</div>
+    </div>
+  </footer>
+  <!-- JS -->
+<script src="script.js"></script>
 </body>
 </html>
